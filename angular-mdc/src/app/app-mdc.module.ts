@@ -8,13 +8,23 @@ import { NgModule } from '@angular/core';
 // 名前順でソートすること
 import {
   MdcButtonModule,
+  MdcDrawerModule,
+  MdcIconModule,
+  MdcListModule,
   MdcTextFieldModule,
+  MdcTopAppBarModule,
+  MdcTypographyModule,
 } from '@angular-mdc/web';
 
 // 上のimportを名前順でソートしてからコピペ
 const MDC_MODULES = [
   MdcButtonModule,
+  MdcDrawerModule,
+  MdcIconModule,
+  MdcListModule,
   MdcTextFieldModule,
+  MdcTopAppBarModule,
+  MdcTypographyModule,
 ];
 
 @NgModule({

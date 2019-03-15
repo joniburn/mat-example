@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-mdc';
+
+  isDrawerOpened = false;
+
+  toggleDrawer() {
+    this.isDrawerOpened = !this.isDrawerOpened;
+  }
+
 }
