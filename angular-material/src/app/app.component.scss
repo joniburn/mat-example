@@ -23,6 +23,10 @@ mat-toolbar > button:first-child {
 mat-sidenav-content {
   display: flex;
   flex-direction: column;
+  mat-toolbar {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
   .myapp-main-content {
     flex-grow: 1;
     margin: 8px;
