@@ -2,3 +2,13 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Noto Sans JP", "Helvetica Neue", sans-serif; }
+
+// Angular Material Theming
+@import '~@angular/material/theming';
+@include mat-core();
+
+$myapp-primary: mat-palette($mat-blue, 800);
+$myapp-accent:  mat-palette($mat-green, 700);
+$myapp-theme: mat-light-theme($myapp-primary, $myapp-accent);
+
+@include angular-material-theme($myapp-theme);
