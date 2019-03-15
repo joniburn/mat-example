@@ -1,9 +1,36 @@
-<div>
-<button mat-raised-button color="primary">Hello, Material!</button>
-</div>
-<div>
-<mat-form-field appearance="outline">
-<mat-label>Text Input</mat-label>
-<input matInput type="text" placeholder="Input some text" name="sample">
-</mat-form-field>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-toolbar color="primary">
+      Hello
+    </mat-toolbar>
+    <mat-nav-list>
+      <h3 matSubheader>めにゅー</h3>
+      <mat-list-item><a matLine href="#">Hoge</a></mat-list-item>
+      <mat-list-item><a matLine href="#">Fuga</a></mat-list-item>
+      <mat-list-item><a matLine href="#">Piyo</a></mat-list-item>
+      <mat-divider></mat-divider>
+      <h3 matSubheader>ひみつ</h3>
+      <mat-list-item><a matLine href="#">Uoooo</a></mat-list-item>
+      <mat-list-item><a matLine href="#">Uwaaa</a></mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="myapp-appbar">
+      <button mat-button (click)="sidenav.toggle()" class="myapp-appbar-menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Hello, Material!</span>
+    </mat-toolbar>
+    <div class="myapp-main-content">
+      <div>
+        <button mat-raised-button color="primary">ぼたん</button>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Text Input</mat-label>
+          <input matInput type="text" placeholder="Input some text" name="sample">
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
