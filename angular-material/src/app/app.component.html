@@ -4,7 +4,7 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) ? false : true">
     <mat-toolbar>おしながき</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list (click)="dismissDrawer()">
       <a mat-list-item routerLink="/top">トップ</a>
       <a mat-list-item routerLink="/features">特徴</a>
     </mat-nav-list>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { MatDrawer } from '@angular/material';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,6 +19,9 @@ export class AppComponent implements OnInit {
       map(result => result.matches)
     );
 
+  @ViewChild('drawer')
+  drawer: MatDrawer;
+
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router: Router,
@@ -33,6 +37,12 @@ export class AppComponent implements OnInit {
         }
       }
     });
+  }
+
+  dismissDrawer() {
+    if (this.drawer.mode === 'over') {
+      this.drawer.close();
+    }
   }
 
 }
