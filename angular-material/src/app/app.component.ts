@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -8,7 +9,9 @@ import { map } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  title: string;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -17,7 +20,19 @@ export class AppComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
+    private router: Router,
   ) {
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe(e => {
+      if (e instanceof NavigationEnd) {
+        const routes = this.router.routerState.root.children;
+        if (routes.length > 0) {
+          this.title = routes[routes.length - 1].snapshot.data.title;
+        }
+      }
+    });
   }
 
 }
