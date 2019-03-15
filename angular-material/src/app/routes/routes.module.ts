@@ -8,6 +8,7 @@ import { AppMaterialModule } from '../app-material.module';
 import { TopComponent } from './top/top.component';
 import { FeaturesComponent } from './features/features.component';
 import { AddressFormComponent } from './features/address-form/address-form.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { AddressFormComponent } from './features/address-form/address-form.compo
     LayoutModule,
     AppMaterialModule,
   ],
-  declarations: [TopComponent, FeaturesComponent, AddressFormComponent]
+  declarations: [TopComponent, FeaturesComponent, AddressFormComponent, DashboardComponent]
 })
 export class RoutesModule { }
