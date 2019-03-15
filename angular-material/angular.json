@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mat-example": {
+    "angular-material": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mat-example",
+            "outputPath": "dist/angular-material",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mat-example:build"
+            "browserTarget": "angular-material:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mat-example:build:production"
+              "browserTarget": "angular-material:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mat-example:build"
+            "browserTarget": "angular-material:build"
           }
         },
         "test": {
@@ -109,7 +109,7 @@
         }
       }
     },
-    "mat-example-e2e": {
+    "angular-material-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -118,11 +118,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mat-example:serve"
+            "devServerTarget": "angular-material:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mat-example:serve:production"
+              "devServerTarget": "angular-material:serve:production"
             }
           }
         },
@@ -138,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "mat-example"
+  "defaultProject": "angular-material"
 }
