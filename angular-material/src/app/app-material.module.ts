@@ -25,6 +25,7 @@ import {
   MatSortModule,
   MatTableModule,
   MatToolbarModule,
+  MatTreeModule,
 } from '@angular/material';
 
 // 上のimportを名前順でソートしてからコピペ
@@ -47,6 +48,7 @@ const MAT_MODULES = [
   MatSortModule,
   MatTableModule,
   MatToolbarModule,
+  MatTreeModule,
 ];
 
 @NgModule({
