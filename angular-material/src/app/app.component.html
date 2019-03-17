@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) ? false : true">
-    <mat-toolbar>おしながき</mat-toolbar>
+    <mat-toolbar>メニュー</mat-toolbar>
     <mat-nav-list (click)="dismissDrawer()">
       <a mat-list-item routerLink="/top">トップ</a>
       <a mat-list-item routerLink="/schematics">Schematics</a>
