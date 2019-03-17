@@ -4,7 +4,7 @@
     <h3 mdcDrawerTitle>メニュー</h3>
   </mdc-drawer-header>
   <mdc-drawer-content>
-    <mdc-list>
+    <mdc-list (click)="toggleDrawer()">
       <mdc-list-item routerLink="/top">トップ</mdc-list-item>
       <mdc-list-item routerLink="/top-app-bar">Top App bar</mdc-list-item>
     </mdc-list>
