@@ -5,14 +5,18 @@ import { AppMdcModule } from './app-mdc.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { RoutesModule } from './routes/routes.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppMdcModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    RoutesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

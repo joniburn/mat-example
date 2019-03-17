@@ -1,28 +1,19 @@
 <mdc-drawer drawer="modal" [open]="isDrawerOpened"
             (opened)="isDrawerOpened = true;" (closed)="isDrawerOpened = false;">
   <mdc-drawer-header>
-    <h3 mdcDrawerTitle>Hello</h3>
+    <h3 mdcDrawerTitle>メニュー</h3>
   </mdc-drawer-header>
   <mdc-drawer-content>
-    <mdc-list-group>
-      <h3 mdcListGroupSubheader>めにゅー</h3>
-      <mdc-list>
-        <mdc-list-item>Hoge</mdc-list-item>
-        <mdc-list-item>Fuga</mdc-list-item>
-        <mdc-list-item>Piyo</mdc-list-item>
-      </mdc-list>
-      <h3 mdcListGroupSubheader>ひみつ</h3>
-      <mdc-list>
-        <mdc-list-item>Uoooo</mdc-list-item>
-        <mdc-list-item>Uwaaa</mdc-list-item>
-      </mdc-list>
-    </mdc-list-group>
+    <mdc-list>
+      <mdc-list-item>トップ</mdc-list-item>
+      <mdc-list-item>xxx</mdc-list-item>
+    </mdc-list>
   </mdc-drawer-content>
 </mdc-drawer>
 
 <mdc-top-app-bar [scrollTarget]="content">
   <mdc-top-app-bar-row>
-    <mdc-top-app-bar-section [align]="'start'" title="Hello, Material!">
+    <mdc-top-app-bar-section [align]="'start'" [title]="title">
       <button mdcTopAppBarNavIcon (click)="toggleDrawer()">
         <mdc-icon>menu</mdc-icon>
       </button>
@@ -31,15 +22,5 @@
 </mdc-top-app-bar>
 
 <div #content mdcTopAppBarFixedAdjust class="myapp-main-content">
-  <div class="myapp-main-content-inner">
-    <div>
-      <button mdc-button raised>ぼたん</button>
-    </div>
-    <div>
-      <mdc-text-field label="Text Input" placeholder="Input some text" outlined></mdc-text-field>
-    </div>
-    <div>
-      <mdc-linear-progress></mdc-linear-progress>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
