@@ -1,0 +1,10 @@
+.myapp-content {
+  margin: 8px;
+}
+
+.myapp-options {
+  margin: 8px;
+  & > div {
+    margin-bottom: 20px;
+  }
+}

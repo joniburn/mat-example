@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
+import { AppBarService } from './app-bar.service';
+
 @Component({
   selector: 'myapp-root',
   templateUrl: './app.component.html',
@@ -14,6 +16,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private router: Router,
+    public s: AppBarService,
   ) {
   }
 

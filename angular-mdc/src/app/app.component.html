@@ -11,7 +11,9 @@
   </mdc-drawer-content>
 </mdc-drawer>
 
-<mdc-top-app-bar [scrollTarget]="content">
+<mdc-top-app-bar
+    [fixed]="s.fixed" [short]="s.short" [scrollTarget]="s.fixed && content"
+    [dense]="s.dense" [prominent]="s.prominent">
   <mdc-top-app-bar-row>
     <mdc-top-app-bar-section [align]="'start'" [title]="title">
       <button mdcTopAppBarNavIcon (click)="toggleDrawer()">

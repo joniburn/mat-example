@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppMdcModule } from '../app-mdc.module';
 
@@ -7,6 +8,7 @@ import { TopAppBarComponent } from './top-app-bar/top-app-bar.component';
 
 @NgModule({
   imports: [
+    FormsModule,
     AppMdcModule,
   ],
   declarations: [
