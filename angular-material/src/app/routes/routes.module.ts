@@ -9,6 +9,7 @@ import { TopComponent } from './top/top.component';
 import { FeaturesComponent } from './features/features.component';
 import { AddressFormComponent } from './features/address-form/address-form.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { TableComponent } from './features/table/table.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
     LayoutModule,
     AppMaterialModule,
   ],
-  declarations: [TopComponent, FeaturesComponent, AddressFormComponent, DashboardComponent]
+  declarations: [TopComponent, FeaturesComponent, AddressFormComponent, DashboardComponent, TableComponent]
 })
 export class RoutesModule { }

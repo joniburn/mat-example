@@ -17,10 +17,13 @@ import {
   MatListModule,
   MatMenuModule,
   MatOptionModule,
+  MatPaginatorModule,
   MatProgressBarModule,
   MatRadioModule,
   MatSelectModule,
   MatSidenavModule,
+  MatSortModule,
+  MatTableModule,
   MatToolbarModule,
 } from '@angular/material';
 
@@ -36,10 +39,13 @@ const MAT_MODULES = [
   MatListModule,
   MatMenuModule,
   MatOptionModule,
+  MatPaginatorModule,
   MatProgressBarModule,
   MatRadioModule,
   MatSelectModule,
   MatSidenavModule,
+  MatSortModule,
+  MatTableModule,
   MatToolbarModule,
 ];
 
