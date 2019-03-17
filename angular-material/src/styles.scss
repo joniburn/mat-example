@@ -12,3 +12,15 @@ $myapp-accent:  mat-palette($mat-green, 700);
 $myapp-theme: mat-light-theme($myapp-primary, $myapp-accent);
 
 @include angular-material-theme($myapp-theme);
+
+// custom styles
+.myapp-code-example {
+  border: solid black 1px;
+  border-radius: 4px;
+  background: white;
+  padding: 8px;
+  overflow-x: auto;
+  pre {
+    margin: 0;
+  }
+}
